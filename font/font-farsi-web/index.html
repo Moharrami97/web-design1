@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>وبگو | نمونه فونت های فارسی مناسب استفاده در وب</title>
+<!-- Webgoo.ir -->
+<style>
+body {
+    font-family: Tahoma, Geneva, sans-serif;
+    direction: rtl;
+    font-size: 12px;
+}
+/*
+@font-face {
+    /* تعریف نام فونت */
+    font-family: 'BZar';
+    /* اکسپلورر 9 به بعد */
+    src: url('http://example.com/fonts/BZar.eot');
+    /* بررسی نصب بودن فونت در سیستم کاربر */
+    src: local('bZar'),
+         /* برای برخی از مرورگرها مانند سافاری */
+         local('b Zar'),
+         /* هک برای اکسپلورر 8 و ماقبل */
+         url('http://example.com/fonts/BZar.eot?#iefix') format('embedded-opentype'),
+         /* فرمت مناسب مرورگرهای خیلی جدید */
+         url('http://example.com/fonts/BZar.woff2') format('woff2'),
+         /* فرمت مناسب مرورگرهای تقریبا جدید */
+         url('http://example.com/fonts/BZar.woff') format('woff'),
+         /* تمام مرورگرها به جزء اکسپلورر */
+         url('http://example.com/fonts/BZar.ttf') format('truetype'),
+         /* نسخه های قدیمی سیستم عامل iOS */
+         url('http://example.com/fonts/BZar.svg#BZar') format('svg');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+*/
+</style>
+</head>
+<body>
+<noscript>
+جاوا اسکریپت در مرورگر شما غیر فعال است!
+</noscript>
+<script>
+function changeFontFace(value){
+    if(value != 0){
+        var paragraph = document.getElementById('paragraph');
+	    var font_face = document.getElementById('font-face');
+        var new_style = document.createElement('style');
+	
+        new_style.appendChild(document.createTextNode("@font-face {font-family: '" + value + "'; src: url('font/" + value + ".eot'); src: url('font/" + value + ".eot?#iefix') format('embedded-opentype'), url('font/" + value + ".woff') format('woff'), url('font/" + value + ".ttf') format('truetype'); font-style: normal; font-weight: normal; font-display: swap;}"));
+        document.head.appendChild(new_style);
+	
+	    paragraph.style.fontFamily = value;
+	    paragraph.style.fontSize = '16px';
+	    font_face.innerHTML = value;
+	}
+}
+</script>
+<select onchange="changeFontFace(this.value);">
+<option value="0">یک فونت را انتخاب کنید</option>
+<option value="BHoma">BHoma</option>
+<option value="BKoodakBold">BKoodakBold</option>
+<option value="BLotus">BLotus</option>
+<option value="BMitra">BMitra</option>
+<option value="BMorvarid">BMorvarid</option>
+<option value="BNarm">BNarm</option>
+<option value="BNazanin">BNazanin</option>
+<option value="BRoya">BRoya</option>
+<option value="BTehran">BTehran</option>
+<option value="BTitrBold">BTitrBold</option>
+<option value="BYas">BYas</option>
+<option value="BYekanWeb">BYekanWeb</option>
+<option value="BZar">BZar</option>
+<option value="Shabnam">Shabnam</option>
+<option value="Vazir-Regular-FD">Vazir-Regular-FD</option>
+</select>
+<div id="container">
+<p id="paragraph">
+این نمونه متن فارسی، کاربرد قلم <span id="font-face">...</span> (اصلاح شده برای صفحات وب) را با استفاده از خاصیت font-face در CSS نسخه 3 نمایش می دهد.
+</p>
+<hr>
+<br>
+<a href="https://webgoo.ir/121/%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%A7%D8%B3%D8%AA%D9%81%D8%A7%D8%AF%D9%87-%D8%A7%D8%B2-%D9%81%D9%88%D9%86%D8%AA-%D9%81%D8%A7%D8%B1%D8%B3%DB%8C-%D8%AF%D8%B1-%D9%88%D8%A8-%D8%A8%D8%A7-css">آموزش استفاده از فونت فارسی در وب با CSS</a>
+</div>
+</body>
+</html>
